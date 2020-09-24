@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "id": "InitSchematics",
+    "title": "Init Options Schema",
+    "type": "object",
+    "description": "Saludar a un dev",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "Name of dev",
+            "$default": {
+                "$source": "argv",
+                "index": 0
+            },
+            "x-prompt": "A quien de frontend quieres saludar?"
+        }
+    },
+    "required": [
+        "name"
+    ]
+}

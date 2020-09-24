@@ -5,7 +5,7 @@ import { Rule, SchematicContext, Tree } from '@angular-devkit/schematics';
 // per file.
 export function init(_options: any): Rule {
   return (tree: Tree, _context: SchematicContext) => {
-    tree.create('hello.js', `console.log('Frontend Rules');`);
+    tree.create('hello.js', `console.log('Hi ${_options.name}Frontend Rules');`);
     return tree;
   };
 }
